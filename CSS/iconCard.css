@@ -1,0 +1,51 @@
+/*root{}*/
+
+.icon-card{
+    height: 100%;
+    transition: transform 0.25s ease-in-out;
+}
+
+/*Need to change theme to light for a dark background*/
+.icon-card-body{
+    background-color: var(--cf-theme-900);
+    color: var(--ss-light-color);
+    height: 100%;
+    padding: 2rem;
+    padding-top: 4rem;
+    text-align: center;
+    border-radius: .5rem;
+    border-color: var(--cf-theme-900);
+    border-style: solid;
+    border-width: 2px;
+    box-shadow:  rgba(0,0,0,.19) 0px, 10px 20px, rgba(0,0,0,.23) 0x, 6px, 6px;
+    margin-top: -2.5rem;
+    height: calc(100% - 2.5rem);
+    transition: box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out, background-color .25s ease-in-out;
+}
+
+.icon-card-header{
+    display: flex;
+    justify-content: space-evenly;
+    filter: drop-shadow(2px, 6px, 6px, rgba(0,0,0,.7));
+}
+
+.icon-card-header>.icon{
+    position: relative;
+    z-index: 2;
+    font-size: 5rem;
+    padding: .5rem;
+}
+
+.icon>img{
+    height: 5rem;
+}
+
+.icon-card:hover{
+    transform: scale(1.03) translateY(-2%);
+}
+
+.icon-card:hover .icon-card-body{
+    background-color: var(--cf-theme-850);
+    background-color: var(--cf-theme-500);
+    box-shadow: rgba(0,0,0, .3) 0px 19px 38px, rgba(0,0,0, .22) 0px 15px 12px;
+}
