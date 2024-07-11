@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="/CSS/site.css" />
 </head>
 
-<body>
+<body data-cf-theme="cyan">
 
     <!--Side Navbar-->
     <div id="menuPillContainer" class="navbar navbar-dark">
@@ -581,7 +581,7 @@
                 <h2 class="display-1 text-center">Let's Chat!</h2>
                 <main class="container">
                     <div>
-                        <form>
+                        <form name="contact" method="POST" netlify>
                             <div class="row text-dark">
                                 <div class="col-12 col-md-6">
                                     <label for="firstName" class="form-label">First Name</label>
@@ -617,7 +617,7 @@
                                     <button type="button" class="btn">
                                         <a class="btn btn-primary" href="#" type="submit" value="Submit">Submit</a>
                                     </button>
-                                </div>
+                                </div>                                
                             </div>
                         </form>
                     </div>
