@@ -148,3 +148,33 @@ main{
         letter-spacing: .6rem;
     }
 /* End Home Section */
+
+/* Footer Section */
+footer.fixed-bottom{
+    z-index: 2;
+    background-color: var(--cf-theme-900) !important;
+}
+
+.footerLogo{
+    height: 50px;
+
+}
+
+.socialIcons{
+    font-size: 2rem;
+    transition: color .25s;
+    color: var(--cf-theme-400);
+}
+
+.socialIcons:hover{
+    color: var(--cf-theme-core);
+}
+
+techIcons i{
+    font-size: 2rem;
+}
+
+/* End Footer Section */
+
+
+

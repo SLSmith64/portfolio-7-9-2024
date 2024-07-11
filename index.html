@@ -29,12 +29,17 @@
     <link rel="stylesheet" href="/CSS/iconCard.css" />
     <link rel="stylesheet" href="/CSS/hoverCard.css" />
     <link rel="stylesheet" href="/CSS/blogCard.css" />
+    <link rel="stylesheet" href="/CSS/menuPill.css" />
     <link rel="stylesheet" href="/CSS/site.css" />
 </head>
 
 <body>
-
-    <header></header>
+    <!--Side Navbar-->
+    <div id="menuPillContainer">
+        <nav id="menuPill">
+            
+        </nav>
+    </div>
     <main>
         <section id="home">
             <div id="homeCover">
@@ -178,12 +183,13 @@
             <div class="container">
                 <h2 class="text-center display-1">Things I have Built</h2>
                 <p>
-                    Showcasing complete functional projects demonstrates what i can bring to your projec. I built these
+                    Showcasing complete functional projects demonstrates what i can bring to your project. I built these
                     projects from the fround up to demonstrate skill with front-end, back-end, security and database
                     development. All these projects are full-stack web projects that are published so that you can demo
                     them easily. <a>Contact me </a> to get a complete code walk through.
                 </p>
                 <div class="row row-cols-1 row-cols-lg-3 gy-5 mt-5">
+                    <!--First Project (Bug Tracker)-->
                     <div class="col">
                         <div class="hc-wrapper">
                             <div class="hc-card">
@@ -196,11 +202,13 @@
                                         A full stack bug tracker app built with
                                         ASP.NET MVC, C#, and SQL.
                                     </p>
-                                    <button type="button" class="btn btn-primary">Learn More</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#bugTrackerModal">Learn More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--Second Project (Blog)-->
                     <div class="col">
                         <div class="hc-wrapper">
                             <div class="hc-card">
@@ -213,11 +221,13 @@
                                         A full stack blog app built with
                                         ASP.NET MVC, C#, and SQL.
                                     </p>
-                                    <button type="button" class="btn btn-primary">Learn More</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#blogModal">Learn More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--Third Project (Financial)-->
                     <div class="col">
                         <div class="hc-wrapper">
                             <div class="hc-card">
@@ -230,7 +240,8 @@
                                         A full expense tracker app built with
                                         ASP.NET MVC, C#, and SQL.
                                     </p>
-                                    <button type="button" class="btn btn-primary">Learn More</button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#financialModal">Learn More</button>
                                 </div>
                             </div>
                         </div>
@@ -537,7 +548,7 @@
                                     <textarea class="form-control textareaStyle" name="message" id="message"
                                         placeholder="message" required></textarea>
                                 </div>
-                                <div class="justify-content-start">
+                                <div class="justify-content-start mt-2 mb-5">
                                     <button type="button" class="btn">
                                         <a class="btn btn-primary" href="#" type="submit" value="Submit">Submit</a>
                                     </button>
@@ -549,12 +560,380 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="py-3 fixed-bottom" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="row g-3 align-items-center">
+                <div class="col-12 col-lg-4 col-md-4 text-center text-lg-start order-last order-md-first">
+                    <img src="/img/logos/(Looka Blue)Initials and Logo.png" class="footerLogo" alt="Dev logo" />
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 d-flex justify-content-center">
+                    <div class="card shadow">
+                        <div class="card-body text-center text-body-emphasis">
+                            Check out my <a href="#contact">Bug Tracker</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 text-center text-lg-end order-first order-lg-last">
+                    <a class="text-decoration-none" href="linkedin.com/in/shawn-s-364bbb21a" target="_blank">
+                        <i class="bi bi-linkedin p-2 socialIcons"></i>
+                    </a>
+                    <a class="text-decoration-none" href="https://github.com/ShawnLSmith" target="_blank">
+                        <i class="bi bi-github p-2 socialIcons"></i>
+                    </a>
+                    <!-- <a class="text-decoration-none" href="#">
+                        <i class="bi bi-twitter p-2 socialIcons"></i>
+                    </a> -->
+                    <a class="text-decoration-none" href="#">
+                        <i class="bi bi-envelope p-2 socialIcons"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Modals-->
+    <!--Bug Modal-->
+    <div class="modal fade" id="bugTrackerModal" tabindex="-1" aria-labelledby="bugTrackerModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bugTrackderModalLabel">Insecticide</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-5">
+                                <div id="carouselBugTracker" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselBugTracker" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselBugTracker" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselBugTracker" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselBugTracker" data-bs-slide-to="3"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="/img/logos/BugTracker_600.jpg" class="d-block w-100"
+                                                alt="Bug Tracker Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen1.jpg" class="d-block w-100"
+                                                alt="Screen Shot 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen2.jpg" class="d-block w-100"
+                                                alt="Screen Shot 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen3.jpg" class="d-block w-100"
+                                                alt="Screen Shot 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselBugTracker" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselBugTracker" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <h3>Insecticide</h3>
+                                <div>
+                                    <p>
+                                        BugBox is a software defect tracking system. Commonly known as a bug
+                                        tracker. Insecticide is built with ASP.NET, MVC, C# and SQL. A role based
+                                        security system was implemented to create permission based roles. The roles of
+                                        Admin , Project Manager, Developer and Submitter restrict what the user can see
+                                        and do. The software allows for users to submit tickets and those tickets are
+                                        tracked through status from Open to Complete.
+                                    </p>
+                                    <p>
+                                        The system was built with C# and .Net in 3 weeks. The front end was developed
+                                        with HTML, Javascript and Bootstrap. The back-end utilizes MVC and C#. The
+                                        database was built with Postgres and hosted on Railway. Please visit the site
+                                        and try it out.
+                                    </p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <h4>Project Type</h4>
+                                        <span>Web Application</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4>Tech Stack</h4>
+                                        <p class="techIcons">
+                                            <i class="devicon-blazor-original colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="Blazor"></i>
+                                            <i class="devicon-csharp-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="C#"></i>
+                                            <i class="devicon-postgresql-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="PostgresSQL"></i>
+                                            <i class="devicon-dotnetcore-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="ASP.NET Core"></i>
+                                            <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="JavaScript"></i>
+                                            <i class="devicon-css3-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="CSS"></i>
+                                            <i class="devicon-bootstrap-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="Bootstrap"></i>
+                                            <i class="devicon-html5-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="HTML 5"></i>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Content goes for the modal-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">View Site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Blog Modal-->
+    <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="blogModalLabel">Code Talk</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-5">
+                                <div id="carouselBlog" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselBlog" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselBlog" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselBlog" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselBlog" data-bs-slide-to="3"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="/img/logos/Blog_600.jpg" class="d-block w-100"
+                                                alt="Bug Tracker Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen1.jpg" class="d-block w-100"
+                                                alt="Screen Shot 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen2.jpg" class="d-block w-100"
+                                                alt="Screen Shot 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen3.jpg" class="d-block w-100"
+                                                alt="Screen Shot 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlog"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBlog"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <h3>Code Talk</h3>
+                                <div>
+                                    <p>
+                                        BugBox is a software defect tracking system. Commonly known as a bug
+                                        tracker. Insecticide is built with ASP.NET, MVC, C# and SQL. A role based
+                                        security system was implemented to create permission based roles. The roles of
+                                        Admin , Project Manager, Developer and Submitter restrict what the user can see
+                                        and do. The software allows for users to submit tickets and those tickets are
+                                        tracked through status from Open to Complete.
+                                    </p>
+                                    <p>
+                                        The system was built with C# and .Net in 3 weeks. The front end was developed
+                                        with HTML, Javascript and Bootstrap. The back-end utilizes MVC and C#. The
+                                        database was built with Postgres and hosted on Railway. Please visit the site
+                                        and try it out.
+                                    </p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <h4>Project Type</h4>
+                                        <span>Web Application</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4>Tech Stack</h4>
+                                        <p>
+                                            <i class="devicon-blazor-original colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="blazor"></i>
+                                            <i class="devicon-csharp-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="C#"></i>
+                                            <i class="devicon-postgresql-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="PostgresSQL"></i>
+                                            <i class="devicon-dotnetcore-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="ASP.NET Core"></i>
+                                            <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="JavaScript"></i>
+                                            <i class="devicon-css3-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="CSS"></i>
+                                            <i class="devicon-bootstrap-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="Bootstrap"></i>
+                                            <i class="devicon-html5-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="HTML 5"></i>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Content goes for the modal-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">View Site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Financial Modal-->
+    <div class="modal fade" id="financialModal" tabindex="-1" aria-labelledby="financialModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="financialModalLabel">Money Grow</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-5">
+                                <div id="carouselFinancial" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselFinancial" data-bs-slide-to="0"
+                                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselFinancial" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselFinancial" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselFinancial" data-bs-slide-to="3"
+                                            aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="/img/logos/Contact_Pro.png" class="d-block w-100" alt="Bug Tracker Logo">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen1.jpg" class="d-block w-100"
+                                                alt="Screen Shot 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen2.jpg" class="d-block w-100"
+                                                alt="Screen Shot 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/img/screenshots/BugTrackerScreen3.jpg" class="d-block w-100"
+                                                alt="Screen Shot 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFinancial"
+                                    data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFinancial"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <h3>Money Grow</h3>
+                                <div>
+                                    <p>
+                                        BugBox is a software defect tracking system. Commonly known as a bug
+                                        tracker. Insecticide is built with ASP.NET, MVC, C# and SQL. A role based
+                                        security system was implemented to create permission based roles. The roles of
+                                        Admin , Project Manager, Developer and Submitter restrict what the user can see
+                                        and do. The software allows for users to submit tickets and those tickets are
+                                        tracked through status from Open to Complete.
+                                    </p>
+                                    <p>
+                                        The system was built with C# and .Net in 3 weeks. The front end was developed
+                                        with HTML, Javascript and Bootstrap. The back-end utilizes MVC and C#. The
+                                        database was built with Postgres and hosted on Railway. Please visit the site
+                                        and try it out.
+                                    </p>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <h4>Project Type</h4>
+                                        <span>Web Application</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4>Tech Stack</h4>
+                                        <p>
+                                            <i class="devicon-blazor-original colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="blazor"></i>
+                                            <i class="devicon-csharp-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="C#"></i>
+                                            <i class="devicon-postgresql-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="PostgresSQL"></i>
+                                            <i class="devicon-dotnetcore-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="ASP.NET Core"></i>
+                                            <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="JavaScript"></i>
+                                            <i class="devicon-css3-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="CSS"></i>
+                                            <i class="devicon-bootstrap-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="Bootstrap"></i>
+                                            <i class="devicon-html5-plain colored" data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom" data-bs-title="HTML 5"></i>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Content goes for the modal-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">View Site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modals-->
+    
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    </script>
+
+    <!--Enable Tooltips-->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
 </body>
 
 </html>
