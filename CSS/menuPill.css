@@ -1,0 +1,123 @@
+/*Menu Pill Container*/
+#menuPillContainer{
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+}
+
+/*Push the menu from the edge a bit.*/
+#menuPill{
+    margin-left: 1rem;
+    z-index: 3;
+    flex-direction: column;
+}
+
+#menuPill .nav-link{
+    /* Bootstrap Override*/
+    --bs-navbar-active-color: var(--cf-theme-400);
+    --bs-navbar-hover-color: var(--cf-theme-200);
+    --bs-nav-link-hover-color: var(--cf-theme-200);
+    /*Make sure each nav link is touching.*/
+    padding: 0;
+    /*Line up the icon and the label.*/
+    display: flex;
+    align-items: center;
+    max-width: 36px;
+    transition: max-width .25s ease-in;
+}
+
+/*Increase the nav-link width on hover.*/
+#menuPill .nav-link:hover, #menuPill .nav-link.active{
+    max-width: 300px;
+}
+
+/*Change the background of the menu icon container*/
+#menuPill .icon-container{
+    background-color: rgba(0,0,0,.7);
+    padding: .5rem;
+}
+
+/*Menu pill labels*/
+#menuPill .menu-label{
+    max-width: 0%;
+    overflow: hidden;
+    padding: .5rem 0;
+    background-color: rgba(0,0,0,.7);
+    white-space: nowrap;
+    border-radius: 0 2rem 2rem 0;
+    transition: max-width .25s ease-in-out, padding-left .25s ease-in-out, padding-right .25s ease-in-out;
+}
+
+/*Media Query 1:Don't Show the Label, unless we are >768px.*/
+@media (min-width: 768px){
+
+    #menuPill .nav-link:hover .menu-label, 
+    #menuPill .nav-link.active .menu-label{
+        max-width: 100%;
+        padding-right: 1rem;
+        color: var(--cf-theme-200);
+    }
+
+    #menuPill>.nav-item:nth-child(1) .icon-container{
+        border-radius: 50% 50% 0 0;
+        transition: border-radius .25s ease-out .25s;
+    }
+
+    #menuPill>.nav-item:nth-child(1)>.nav-link:hover .icon-container,
+    #menuPill>.nav-item:nth-child(1).active .icon-container{
+        border-radius: 50% 0 0 0;
+        transition: border-radius 0s ease-in-out 0s;
+    }
+
+     #menuPill>.nav-item:nth-last-child(1) .icon-container{
+        border-radius: 0 0 50% 50%;
+        transition: border-radius .25s ease-out .25s;
+    }
+
+     #menuPill>.nav-item:nth-last-child(1)>.nav-link:hover .icon-container,
+    #menuPill>.nav-item:nth-last-child(1) .active .icon-container{
+        border-radius:  0 0 0 50%;
+        transition: border-radius .0s ease-in-out .0s;
+    }
+
+    .nav-tooltip{
+        display: none;
+    }
+
+    .section-page{
+        padding-left: 160px;
+        padding-right: 160px;
+    }    
+}
+/*Media Query 2:Move NavPill navbar to the top for mobile screen sizes. */
+@media (max-width: 767.98px){
+
+    #menuPillContainer{
+        top: 0;
+        height: 4rem;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    #menuPill{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menuPill>.nav-item:nth-child(1) .icon-container{
+        border-radius: 50% 0 0 50%;
+    }
+
+    #menuPill>.nav-item:nth-last-child(1) .icon-container{
+        border-radius: 0 50% 50% 0;
+    }
+
+    #menuPill .menu-label{
+        display: none;
+    }
+
+    .nav-tooltip{
+        --bs-tooltip-color: var(--cf-theme-200);
+        --bs-tooltip-opacity: 0.7;
+    }
+}
